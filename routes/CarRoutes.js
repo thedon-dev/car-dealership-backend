@@ -18,7 +18,7 @@ router.post("/cars", upload.single("image"), async (req, res) => {
   try {
     const newCar = new Car({
       image: req.file
-        ? `http://localhost:5000/uploads/${req.file.filename}`
+        ? `https://car-dealership-backend-mhv2.onrender.com/${req.file.filename}`
         : "",
       name: req.body.name,
       status: req.body.status,
