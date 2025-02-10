@@ -25,4 +25,5 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log("MongoDB Connection String:", process.env.MONGO_URL);
 });
