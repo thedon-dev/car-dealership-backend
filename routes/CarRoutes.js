@@ -1,6 +1,6 @@
 import express from "express";
 import Car from "../models/Car.js";
-import upload from "../middleware/upload.js"; // Import Cloudinary upload middleware
+import upload from "../middlewares/upload.js"; // Import Cloudinary upload middleware
 
 const router = express.Router();
 
