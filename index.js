@@ -14,10 +14,12 @@ app.use("/uploads", express.static("uploads"));
 
 const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.error(err));
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Automobile API 🚗");
